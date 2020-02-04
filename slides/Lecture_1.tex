@@ -1,0 +1,87 @@
+\documentclass[10pt,pdf,hyperref={unicode},aspectratio=1610]{beamer}
+
+% \documentclass[aspectratio=43]{beamer}
+% \documentclass[aspectratio=1610]{beamer}
+% \documentclass[aspectratio=169]{beamer}
+
+% подключаем кириллицу 
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+
+% Выбираем основную тему
+%\usetheme{Berlin} 
+\usetheme{Copenhagen}
+% Дополнительно подключаем шрифты
+\usefonttheme{serif} 
+% Авторы
+\author{Баркалов~К.А.}
+% Название презентации
+\title{Распределенные алгоритмы}
+\subtitle{Введение}
+% Организации
+\institute{Кафедра МОСТ института ИТММ \\ ННГУ им. Н.И. Лобачевского }
+% Дата (команда \today выводит текущую дату)
+\date{Нижний Новгород, 2020}
+% \logo{\includegraphics[height=5mm]{images/logo.png}\vspace{-7pt}}
+
+% Определяем необходимые окружения
+\newtheorem{mydef}{Определение}
+\newtheorem{mylem}{Лемма}
+
+% отключить клавиши навигации
+\setbeamertemplate{navigation symbols}{}
+
+
+\begin{document}
+% Титульная страница
+\frame{\titlepage}
+
+% Содержание презентации (выводятся только основные разделы)
+\frame{\tableofcontents}%[hideallsubsections]}
+% Разбиение текста на разделы
+% Отображаются в содержании, но не в презентации
+%\chapter{Метрические пространства}
+%\section{Функциональная зависимость. Пространство. Упорядоченность}
+\section{Основные понятия}
+\subsection{Первый слайд}
+% Обычный слайд
+\begin{frame}{Первый слайд}
+%\begin{mydef}
+%Пусть даны два произвольных множества $X$ и $Y$ и дан закон, 
+%и дан закон, согласно которому каждому элементу $x\in X$
+%ставится в соответствие единственный элемент $y\in Y$. Будем
+%говорить тогда, что задан \alert{оператор} $y=f(x)$.
+%\end{mydef}
+\end{frame}
+
+\subsection{Второй слайд}
+% Слайд, состоящий из нескольких слоёв
+\begin{frame}{Второй слайд}
+%\begin{mydef}
+%Множество $X$ называется \textit{упорядоченным}, если для
+%любых двух элементов $a$ и $b$ из этого множества либо
+%$a<b$, либо $b<a$.
+%\end{mydef}
+%\pause
+%\begin{mylem}[Цермело]
+%Всякое множество путём введения некоторого соотношения
+%порядка можно сделать вполне упорядоченным.
+%\end{mylem}
+\end{frame}
+
+\section{Историческая справка}
+
+% Слайд с перечислением
+\begin{frame}{Третий слайд}
+%Число $\rho_X(x,y)$ называется \textit{расстоянием}.
+%Аксиомы метрики:
+%\begin{enumerate}
+%\item<+-> $\rho_X(x,y)=0 \Leftrightarrow x=y$
+%(аксиома тождества);
+%\item<+-> $\rho_X(x,y)=\rho_X(y,x)$ (аксиома симметрии);
+%\item<+-> $\rho_X(x,y)+\rho_X(y,z)\ge\rho_X(x,z)$
+%(аксиома треугольника).
+%\end{enumerate}
+\end{frame}
+
+\end{document}
