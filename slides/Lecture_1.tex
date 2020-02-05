@@ -4,6 +4,12 @@
 % \documentclass[aspectratio=1610]{beamer}
 % \documentclass[aspectratio=169]{beamer}
 
+% подключаем для описания алгоритмов
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+%\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
 % подключаем кириллицу 
 \usepackage[cp1251]{inputenc}
 \usepackage[russian]{babel}
@@ -27,6 +33,9 @@
 % Определяем необходимые окружения
 \newtheorem{mydef}{Определение}
 \newtheorem{mylem}{Лемма}
+
+%\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
+
 
 % отключить клавиши навигации
 \setbeamertemplate{navigation symbols}{}
@@ -82,6 +91,30 @@
 %\item<+-> $\rho_X(x,y)+\rho_X(y,z)\ge\rho_X(x,z)$
 %(аксиома треугольника).
 %\end{enumerate}
+
+
 \end{frame}
+
+\section{Пример распределенного алгоритма}
+
+% Слайд с перечислением
+\begin{frame}{Получить информацию о сети}
+Наконец-то заработал пример алгоритма	
+
+\begin{algorithm}[H]
+\caption{Название алгоритма}
+\begin{algorithmic}[1]
+\If {$i \geq maxval$}
+    \State $i \gets 0$
+\Else
+    \If {$i+k \leq maxval$}
+        \State $i \gets i+k$
+    \EndIf
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+\end{frame}
+
 
 \end{document}
