@@ -17,6 +17,8 @@
 % Выбираем основную тему
 %\usetheme{Berlin} 
 \usetheme{Copenhagen}
+%\usetheme{Hannover}
+
 % Дополнительно подключаем шрифты
 \usefonttheme{serif} 
 % Авторы
@@ -64,56 +66,41 @@
 \end{frame}
 
 \subsection{Второй слайд}
-% Слайд, состоящий из нескольких слоёв
-\begin{frame}{Второй слайд}
-%\begin{mydef}
-%Множество $X$ называется \textit{упорядоченным}, если для
-%любых двух элементов $a$ и $b$ из этого множества либо
-%$a<b$, либо $b<a$.
-%\end{mydef}
-%\pause
-%\begin{mylem}[Цермело]
-%Всякое множество путём введения некоторого соотношения
-%порядка можно сделать вполне упорядоченным.
-%\end{mylem}
-\end{frame}
+\begin{frame}{Распределенные системы}
 
-\section{Историческая справка}
+Зачем нужны распределенные системы?
 
-% Слайд с перечислением
-\begin{frame}{Третий слайд}
-%Число $\rho_X(x,y)$ называется \textit{расстоянием}.
-%Аксиомы метрики:
-%\begin{enumerate}
-%\item<+-> $\rho_X(x,y)=0 \Leftrightarrow x=y$
-%(аксиома тождества);
-%\item<+-> $\rho_X(x,y)=\rho_X(y,x)$ (аксиома симметрии);
-%\item<+-> $\rho_X(x,y)+\rho_X(y,z)\ge\rho_X(x,z)$
-%(аксиома треугольника).
-%\end{enumerate}
+\begin{itemize}
+\item Обмен информацией 
+\item Совместное использование ресурсов 
+\item Повышение надежности (дублирование)
+\item Повышение производительности (параллельное выполение)
+\item Упрощение проектирования (специализация)
+\end{itemize}
 
 
 \end{frame}
+
 
 \section{Пример распределенного алгоритма}
 
-% Слайд с перечислением
-\begin{frame}{Получить информацию о сети}
-Наконец-то заработал пример алгоритма	
+\begin{frame}{Пример распределенного алгоритма}
 
 \begin{algorithm}[H]
 \caption{Название алгоритма}
-\begin{algorithmic}[1]
-\If {$i \geq maxval$}
-    \State $i \gets 0$
-\Else
-    \If {$i+k \leq maxval$}
-        \State $i \gets i+k$
-    \EndIf
-\EndIf
+\begin{algorithmic}
+
+\ForAll {$id_j \in neighbors_i$} 
+	\State{send Position($id_i,neighbors_i$) to the neighbor $id_j$} 
+\EndFor
+\State{$part_i \gets true$}
+end operation.
+when START() is received do
+\State{
+	\If {$part_i$}	\State {START()}	\EndIf	
+}
 \end{algorithmic}
 \end{algorithm}
-
 \end{frame}
 
 
